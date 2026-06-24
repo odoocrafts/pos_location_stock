@@ -9,6 +9,12 @@ POS Location Stock
 ==================
 Adds a "Check Other Locations" button to the POS Product Details screen, allowing cashiers to quickly see real-time stock levels of a product across all configured warehouses.
     """,
+    'author': 'Odoocrafts Innovations',
+    'website': 'https://odoocrafts.com',
+    'price': 25.0,
+    'currency': 'EUR',
+    'license': 'OPL-1',
+    'images': ['static/description/banner.png'],
     'depends': ['point_of_sale', 'stock'],
     'data': [],
     'assets': {
@@ -21,5 +27,4 @@ Adds a "Check Other Locations" button to the POS Product Details screen, allowin
     },
     'installable': True,
     'application': False,
-    'license': 'LGPL-3',
 }
