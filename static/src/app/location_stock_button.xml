@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- The component's template -->
+    <t t-name="pos_location_stock.LocationStockButton">
+        <button t-attf-class="{{props.class}} flex-shrink-0" t-on-click="onClick">
+            <i class="fa fa-search me-1" role="img" aria-label="Location Stock" title="Location Stock" />
+            <span>Check Stock</span>
+        </button>
+    </t>
+
+    <!-- The template extension -->
+    <t t-name="pos_location_stock.ControlButtons" t-inherit="point_of_sale.ControlButtons" t-inherit-mode="extension">
+        <xpath expr="//InternalNoteButton" position="after">
+            <LocationStockButton t-if="!props.showRemainingButtons || (ui.isSmall and props.showRemainingButtons)" class="buttonClass" />
+        </xpath>
+    </t>
+</templates>
